@@ -3,17 +3,34 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+// Páginas:
+import { HomePage } from '../pages/home/home';
+import { BasicPage } from '../pages/basic/basic';
+import { InsetPage } from '../pages/inset/inset';
+import { DividersPage } from '../pages/dividers/dividers';
+import { HeadersPage } from '../pages/headers/headers';
+import { IconPage } from '../pages/icon/icon';
+import { AvatarPage } from '../pages/avatar/avatar';
+import { MultiLinePage } from '../pages/multi-line/multi-line';
+import { SlidingPage } from '../pages/sliding/sliding';
+import { ThumbnailPage } from '../pages/thumbnail/thumbnail';
 
 @NgModule({
   declarations: [
     MyApp,
+    // Páginas:
     HomePage,
-    ListPage
+    BasicPage,
+    InsetPage,
+    DividersPage,
+    HeadersPage,
+    IconPage,
+    AvatarPage,
+    MultiLinePage,
+    SlidingPage,
+    ThumbnailPage
   ],
   imports: [
     BrowserModule,
@@ -23,7 +40,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    BasicPage,
+    InsetPage,
+    DividersPage,
+    HeadersPage,
+    IconPage,
+    AvatarPage,
+    MultiLinePage,
+    SlidingPage,
+    ThumbnailPage
   ],
   providers: [
     StatusBar,

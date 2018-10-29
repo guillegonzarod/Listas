@@ -2,9 +2,17 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-
+// Páginas:
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { BasicPage } from '../pages/basic/basic';
+import { InsetPage } from '../pages/inset/inset';
+import { DividersPage } from '../pages/dividers/dividers';
+import { HeadersPage } from '../pages/headers/headers';
+import { IconPage } from '../pages/icon/icon';
+import { AvatarPage } from '../pages/avatar/avatar';
+import { MultiLinePage } from './../pages/multi-line/multi-line';
+import { SlidingPage } from '../pages/sliding/sliding';
+import { ThumbnailPage } from '../pages/thumbnail/thumbnail';
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +30,16 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
+      // 1. Elementos del 'sidemenu':
+      { title: 'Basic', component: BasicPage },
+      { title: 'Inset', component: InsetPage },
+      { title: 'Dividers', component: DividersPage },
+      { title: 'Headers', component: HeadersPage },
+      { title: 'Icon', component: IconPage },
+      { title: 'Avatar', component: AvatarPage },
+      { title: 'Multi-line', component: MultiLinePage },
+      { title: 'Sliding', component: SlidingPage },
+      { title: 'Thumbnail', component: ThumbnailPage }
     ];
 
   }
