@@ -15,7 +15,13 @@
 
 </ion-header>
 
-
 <ion-content padding>
+
+  <ion-item-group *ngFor="let grupo of this.contactosAgrupados" >
+    <ion-item-divider color="light">{{ grupo.letra }}</ion-item-divider>
+    <ion-item ion-item *ngFor="let contacto of grupo.contactosGrupo" (click)="itemSelected(contacto)">
+      {{ contacto.razonSocial }}
+    </ion-item>
+  </ion-item-group>
 
 </ion-content>

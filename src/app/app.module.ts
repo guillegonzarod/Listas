@@ -16,6 +16,7 @@ import { AvatarPage } from '../pages/avatar/avatar';
 import { MultiLinePage } from '../pages/multi-line/multi-line';
 import { SlidingPage } from '../pages/sliding/sliding';
 import { ThumbnailPage } from '../pages/thumbnail/thumbnail';
+import { GetContactsProvider } from '../providers/get-contacts/get-contacts';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ThumbnailPage } from '../pages/thumbnail/thumbnail';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GetContactsProvider
   ]
 })
 export class AppModule {}

@@ -15,7 +15,10 @@
 
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list inset>
+    <button ion-item *ngFor="let item of this.contactos" (click)="itemSelected(item)">
+      {{ item.razonSocial }}
+    </button>
+  </ion-list>
 </ion-content>

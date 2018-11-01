@@ -15,7 +15,9 @@
 
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list *ngFor="let grupo of this.gruposContactosCRM">
+    <ion-list-header>{{ grupo.titulo }}</ion-list-header>
+    <ion-item *ngFor="let contacto of grupo.contactosGrupo" (click)="itemSelected(contacto)">{{ contacto.razonSocial }}</ion-item>
+  </ion-list>
 </ion-content>
