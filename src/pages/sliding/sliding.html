@@ -15,7 +15,38 @@
 
 </ion-header>
 
+<ion-content class="outer-content">
+  <ion-list>
+    <ion-list-header>
+      Clientes
+    </ion-list-header>
 
-<ion-content padding>
+    <ion-item-sliding *ngFor="let cliente of this.contactos">
+
+      <ion-item (click)="itemSelected(cliente)">
+        <ion-avatar item-start>
+          <img src="../../assets/imgs/globo.jpeg">
+        </ion-avatar>
+        <h2>{{ cliente.codigoCliente }}</h2>
+        <p>{{ cliente.nombre }}</p>
+      </ion-item>
+
+      <ion-item-options>
+        <button ion-button color="light" icon-start>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-start>
+          <ion-icon name="open"></ion-icon>
+          Editar
+        </button>
+        <button ion-button color="secondary" icon-start>
+          <ion-icon name="call"></ion-icon>
+          Llamar
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
 
 </ion-content>

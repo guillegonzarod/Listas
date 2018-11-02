@@ -15,7 +15,17 @@
 
 </ion-header>
 
-
 <ion-content padding>
+
+  <ion-list>
+      <ion-item *ngFor="let cliente of this.contactos" (click)="itemSelected(cliente)">
+      <ion-thumbnail item-start>
+        <img src="../../assets/imgs/globo.jpeg">
+      </ion-thumbnail>
+      <h2>{{ cliente.codigoCliente }}</h2>
+      <p>{{ cliente.nombre }}</p>
+      <button ion-button clear item-end>View</button>
+    </ion-item>
+  </ion-list>
 
 </ion-content>

@@ -15,7 +15,13 @@
 
 </ion-header>
 
-
 <ion-content padding>
-
+  <ion-list no-border>
+    <ion-list-header>Personas de Contacto</ion-list-header>
+    <ion-item *ngFor="let cliente of this.contactos" (click)="itemSelected(cliente)">
+      <ion-icon name='contact' item-start></ion-icon>
+      <p class="cliente">{{ cliente.personaContacto }}</p>
+      <ion-note item-end>{{ cliente.potencial }}</ion-note>
+    </ion-item>
+  </ion-list>
 </ion-content>
